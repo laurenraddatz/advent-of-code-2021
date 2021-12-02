@@ -1,0 +1,31 @@
+Arguments: 
+  /Users/lraddatz/.nvm/versions/node/v14.4.0/bin/node /usr/local/Cellar/yarn/1.22.17/libexec/bin/yarn.js
+
+PATH: 
+  /Users/lraddatz/.rvm/gems/ruby-2.7.4/bin:/Users/lraddatz/.rvm/gems/ruby-2.7.4@global/bin:/Users/lraddatz/.rvm/rubies/ruby-2.7.4/bin:/Users/lraddatz/.nvm/versions/node/v14.4.0/bin:/Users/lraddatz/Development/topsoil/bin:/Users/lraddatz/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/local/bin:/usr/local/munki:/Users/lraddatz/Development/go/bin:/Users/lraddatz/.rvm/bin
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  14.4.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/lraddatz/advent-of-code-2021/package.json: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.22.17/libexec/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.22.17/libexec/lib/cli.js:310:30)
+      at /usr/local/Cellar/yarn/1.22.17/libexec/lib/cli.js:321:13
+
+npm manifest: 
+  
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
