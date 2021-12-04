@@ -1,4 +1,4 @@
-import { readFileSync } from "fs"
+import { readFileSync } from 'fs'
 
 const input = readFileSync('src/3/input.txt').toString().split('\n').map((a) => a.split('').map((b) => parseInt(b)))
 
@@ -6,8 +6,7 @@ const transpose = (m) => m[0].map((a, i) => m.map((a) => a[i]))
 
 const getMostFrequent = (m) => (
   m.map((bits) => bits.reduce((acc, bit) => {
-    if (bit === 1) return acc + 1
-    else return acc - 1
+    return bit === 1 ? acc + 1 : acc - 1
   }, 0))
   .map((weight) => weight >= 0 ? 1 : 0)
 )
@@ -21,7 +20,7 @@ const partOne = () => {
 
   for (const bit of mosts) {
     gamma.push(bit)
-    epsilon.push(bit === 0 ? 1 : 0)
+    epsilon.push(bit === 1 ? 0 : 1)
   }
 
   return parseInt(gamma.join(''), 2) * parseInt(epsilon.join(''), 2) // 3813416
