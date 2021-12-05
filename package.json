@@ -14,6 +14,6 @@
     "nodemon": "^2.0.15"
   },
   "scripts": {
-    "start": "babel-node src/4/index.js"
+    "start": "babel-node src/5/index.js"
   }
 }
