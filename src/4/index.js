@@ -19,7 +19,7 @@ const partOne = () => {
   let winner
   const called = []
 
-  while(!bingo && i < numbers.length) {
+  while (!bingo && i < numbers.length) {
     called.push(numbers[i])
 
     for (let j = 0; j < boards.length; j++) {
@@ -56,7 +56,7 @@ const partTwo = () => {
   const winners = []
   const called = []
 
-  while(winners.length !== boards.length && i <= numbers.length) {
+  while (winners.length !== boards.length && i < numbers.length) {
     called.push(numbers[i])
 
     for (let j = 0; j < boards.length; j++) {
