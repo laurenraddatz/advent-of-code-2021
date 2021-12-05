@@ -41,7 +41,11 @@ const partOne = () => {
     i++
   }
 
-  const unmarkedSum = winner.map((line) => line.filter((a) => !called.includes(a))).flat().reduce((acc, a) => acc + parseInt(a), 0)
+  const unmarkedSum = winner
+    .map((line) => line.filter((a) => !called.includes(a)))
+    .flat()
+    .reduce((acc, a) => acc + parseInt(a), 0)
+
   const lastCalled = called.pop()
 
   return unmarkedSum * parseInt(lastCalled) // 49686
@@ -79,7 +83,11 @@ const partTwo = () => {
   const w = winners.pop()
   const winner = boards[w]
 
-  const unmarkedSum = winner.map((line) => line.filter((a) => !called.includes(a))).flat().reduce((acc, a) => acc + parseInt(a), 0)
+  const unmarkedSum =
+    winner.map((line) => line.filter((a) => !called.includes(a)))
+    .flat()
+    .reduce((acc, a) => acc + parseInt(a), 0)
+
   const lastCalled = called.pop()
 
   return unmarkedSum * parseInt(lastCalled) // 26878
