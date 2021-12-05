@@ -14,34 +14,34 @@ const dayFive = (diagonals = false) => {
 
     if (x0 === x1) {
       const [start, end] = [y0, y1].sort((a, b) => a - b)
-      let count = start
+      let y = start
 
-      while (count <= end) {
-        const coord = `${x0}, ${count}`
+      while (y <= end) {
+        const coord = `${x0}, ${y}`
         grid.set(coord, (grid.get(coord) ?? 0) + 1)
-        count++
+        y++
       }
     } else if (y0 === y1) {
       const [start, end] = [x0, x1].sort((a, b) => a - b)
-      let count = start
+      let x = start
 
-      while (count <= end) {
-        const coord = `${count}, ${y0}`
+      while (x <= end) {
+        const coord = `${x}, ${y0}`
         grid.set(coord, (grid.get(coord) ?? 0) + 1)
-        count++
+        x++
       }
     } else if (diagonals && Math.abs(x0 - x1) === Math.abs(y0 - y1)) {
       // y = mx + b
-      const slope = (y1 - y0) / (x1 - x0)
-      const b = y0 - x0 * slope
+      const m = (y1 - y0) / (x1 - x0)
+      const b = y0 - x0 * m
 
       const [start, end] = [x0, x1].sort((a, b) => a - b)
-      let count = start
+      let x = start
 
-      while (count <= end) {
-        const coord = `${count}, ${slope * count + b}`
+      while (x <= end) {
+        const coord = `${x}, ${m * x + b}`
         grid.set(coord, (grid.get(coord) ?? 0) + 1)
-        count++
+        x++
       }
     }
   }
