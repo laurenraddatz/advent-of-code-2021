@@ -1,4 +1,4 @@
-import { readFileSync } from 'fs';
+import { readFileSync } from 'fs'
 
 const input = readFileSync('src/7/input.txt').toString().split(',').map((a) => parseInt(a))
 
@@ -15,8 +15,8 @@ const partOne = () => {
     )
   }
 
-  return Math.min(...distances.values());
-};
+  return Math.min(...distances.values())
+}
 
 const getFuel = (num) => (
   Array(num + 1)
